@@ -81,20 +81,26 @@ class CollectionCollectionViewController: UICollectionViewController {
         let dataItem = plantDataItems[indexPath.item]
         cell.dataItem = dataItem
         
-        
-        print(indexPath.item)
-        
-        
-        print("indexpath.row \(indexPath.row)")
-        
-        print("indexpath.section \(indexPath.section)")
-    
+       
         // Configure the cell
         
         
     
         return cell
     }
+    
+   /* ****************************************** Commit 3 *************************************************** */
+ 
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as! DataItemHeader
+        let title = "Plants"
+        sectionHeader.title = title
+        
+        return sectionHeader
+    }
+    
+ 
+    
 
     // MARK: UICollectionViewDelegate
 

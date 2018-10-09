@@ -14,6 +14,7 @@
 		64295962216BF39400D51A5E /* CollectionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64295961216BF39400D51A5E /* CollectionCollectionViewController.swift */; };
 		64295964216BF62D00D51A5E /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64295963216BF62D00D51A5E /* DataItem.swift */; };
 		64EFED08216C2AA600F11D21 /* DataItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EFED07216C2AA600F11D21 /* DataItemCell.swift */; };
+		64EFED0C216CBFC600F11D21 /* DataItemHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EFED0B216CBFC600F11D21 /* DataItemHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		64295961216BF39400D51A5E /* CollectionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCollectionViewController.swift; sourceTree = "<group>"; };
 		64295963216BF62D00D51A5E /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
 		64EFED07216C2AA600F11D21 /* DataItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItemCell.swift; sourceTree = "<group>"; };
+		64EFED0B216CBFC600F11D21 /* DataItemHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItemHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				6429595B216BF26B00D51A5E /* Info.plist */,
 				64295963216BF62D00D51A5E /* DataItem.swift */,
 				64EFED07216C2AA600F11D21 /* DataItemCell.swift */,
+				64EFED0B216CBFC600F11D21 /* DataItemHeader.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				64295962216BF39400D51A5E /* CollectionCollectionViewController.swift in Sources */,
 				64295964216BF62D00D51A5E /* DataItem.swift in Sources */,
 				64EFED08216C2AA600F11D21 /* DataItemCell.swift in Sources */,
+				64EFED0C216CBFC600F11D21 /* DataItemHeader.swift in Sources */,
 				64295950216BF25B00D51A5E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
