@@ -28,6 +28,7 @@ private let reuseIdentifier = "Cell"
 
 
 /******************************************************************************/
+
 Second Commit:
 
 Add the follwoing lines in CollectionViewController to change the layout:
