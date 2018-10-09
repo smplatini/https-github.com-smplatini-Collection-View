@@ -40,4 +40,10 @@ Add the follwoing lines in CollectionViewController to change the layout:
         layout.itemSize = CGSize(width: width, height: width)
         
         
-        
+/*************************************************************************************************/
+
+Third Commit:
+
+Section Header is created programmatically. A custom header class is made called DataItemHeader. In main storyboard connection is made to the label of the header. Finally the following method is implemented in the collectionViewController class:
+
+override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
