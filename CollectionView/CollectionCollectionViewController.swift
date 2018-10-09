@@ -19,6 +19,11 @@ class CollectionCollectionViewController: UICollectionViewController {
     
        override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Changing the size of the cell at runtime
+        let width = collectionView!.frame.width / 3
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height: width)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
