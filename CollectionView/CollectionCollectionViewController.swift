@@ -15,6 +15,8 @@ import UIKit
 
 class CollectionCollectionViewController: UICollectionViewController {
     
+    var animalDataItems = [DataItem]()
+    var allItems = [[DataItem]]()
     var plantDataItems = [DataItem]()
     
        override func viewDidLoad() {
@@ -44,7 +46,22 @@ class CollectionCollectionViewController: UICollectionViewController {
             
             
         }
+        
+        for i in 1...12 {
+            if i > 9 {
+                
+                animalDataItems.append((DataItem(title: "Another title", kind: Kind.Animal, imageName: "anim\(i).jpg")))
+                
+                
+            }
+            else{
+                animalDataItems.append(DataItem(title: "Another Title #0\(i)", kind: Kind.Animal, imageName: "anim0\(i).jpg"))
+            }
+            
+        }
 
+        allItems.append(plantDataItems)
+        allItems.append(animalDataItems)
      
         
         
@@ -65,20 +82,20 @@ class CollectionCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return allItems.count
     
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return plantDataItems.count
+        return allItems[section].count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! DataItemCell
-        let dataItem = plantDataItems[indexPath.item]
+        let dataItem = allItems[indexPath.section][indexPath.item]
         cell.dataItem = dataItem
         
        
@@ -93,8 +110,13 @@ class CollectionCollectionViewController: UICollectionViewController {
  
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "SectionHeader", for: indexPath) as! DataItemHeader
-        let title = "Plants"
-        sectionHeader.title = title
+        
+        var title = ""
+        
+        if let kind = Kind(rawValue: indexPath.section){
+            sectionHeader.title = kind.description()
+        }
+        
         
         return sectionHeader
     }
