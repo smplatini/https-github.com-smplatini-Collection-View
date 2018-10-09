@@ -24,3 +24,19 @@ self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentif
 Also remove the following declaration at the top of the class (if your generated CollectionViewController class has it).
 
 private let reuseIdentifier = "Cell"
+
+
+
+/******************************************************************************/
+Second Commit:
+
+Add the follwoing lines in CollectionViewController to change the layout:
+
+//Changing the size of the cell at runtime
+
+        let width = collectionView!.frame.width / 3
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: width, height: width)
+        
+        
+        
