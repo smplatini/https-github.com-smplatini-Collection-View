@@ -19,6 +19,27 @@ class CollectionCollectionViewController: UICollectionViewController {
     var allItems = [[DataItem]]()
     var plantDataItems = [DataItem]()
     
+    
+    //Function to insert item in collections
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        
+        let item = DataItem(title: "New Item", kind: .Animal, imageName: "default.jpeg")
+        let index = allItems[0].count - 7
+        allItems[0].append(item)
+        let indexPath = IndexPath(item: index, section: 0)
+       print(index)
+        collectionView?.insertItems(at: [indexPath])
+        print(indexPath)
+        
+        
+    }
+    
+    
+    
+    
+    
+    
        override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,6 +87,8 @@ class CollectionCollectionViewController: UICollectionViewController {
         
         
     }
+    
+    
 
     /*
     // MARK: - Navigation
@@ -126,19 +149,21 @@ class CollectionCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDelegate
 
-    /*
+  
     // Uncomment this method to specify if the specified item should be highlighted during tracking
     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+        
+        print(indexPath)
         return true
     }
-    */
+ 
 
-    /*
+    
     // Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         return true
     }
-    */
+    
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item

@@ -72,7 +72,13 @@
                             <outlet property="delegate" destination="srX-HD-2ja" id="Adc-GS-SAu"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Nature Pictures" id="NHC-rV-gFg"/>
+                    <navigationItem key="navigationItem" title="Nature Pictures" id="NHC-rV-gFg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Rcj-pC-dLx">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="srX-HD-2ja" id="RuP-0u-wqz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TU1-4H-Ceg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
